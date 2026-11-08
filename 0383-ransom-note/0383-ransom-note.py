@@ -15,3 +15,13 @@ class Solution(object):
                 return False
             counts[letter] -= 1
         return True
+
+"""
+adding this sample solution using a set in 3ms runtime:
+class Solution(object):
+    def canConstruct(self, ransomNote, magazine):
+        for char in set(ransomNote):
+            if ransomNote.count(char) > magazine.count(char):
+                return False
+        return True
+"""
